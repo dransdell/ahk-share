@@ -1,8 +1,13 @@
+;;;;;;;;;;;;;;;;;;;;;;;;; INIT ;;;;;;;;;;;;;;;;;;;;;;;;;
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
+;;;;;;;;;;;;;;;;;;;;;;;;; CONFIG ;;;;;;;;;;;;;;;;;;;;;;;;;
+;
+;	Note: this script only works in windowed mode.  Press Mouse5 to toggle autorun on/off.  RCtrl + Mouse5 to exit app
+;
 
 toggle:=0
 tooltipx:=1450
@@ -84,59 +89,3 @@ if (toggle=0) {
 
 }
 
-
-
-
-
-
-
-
-
-
-;Loop {
-;
-;	CoordMode, Tooltip
-;	Tooltip, %toggledisplaytext%, %tooltipx%, %tooltipy%, 1
-;
-;	KeyWait, %togglekey%, D
-;	KeyWait, %togglekey%
-;
-;	ExitApp
-;
-;	;if (toggle=0) {
-;	;	toggle=1
-;	;	toggledisplaytext:=%toggleontext%
-;	;
-;	;}
-;	;
-;	;if (toggle=1) {
-;	;	toggle=0
-;	;	toggledisplaytext:=%toggleofftext%
-;	;
-;	;}
-;
-;
-;
-;}
-
-
-
-
-;;; Working toggles
-;CoordMode, Tooltip
-;Tooltip, %toggleofftext%, %tooltipx%, %tooltipy%, 1
-;
-;KeyWait, F12, D
-;KeyWait, F12
-;
-;CoordMode, Tooltip
-;Tooltip, %toggleontext%, %tooltipx%, %tooltipy%, 1
-;
-;KeyWait, F12, D
-;KeyWait, F12
-;
-;CoordMode, Tooltip
-;Tooltip, %toggleofftext%, %tooltipx%, %tooltipy%, 1
-;
-;KeyWait, F12, D
-;KeyWait, F12
