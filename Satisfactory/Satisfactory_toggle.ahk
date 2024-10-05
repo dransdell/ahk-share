@@ -81,7 +81,6 @@ if (toggle=1) {
 if (toggle=0) {
 
 	; off actions
-	Send {%keypress% Up}
 	Send {%keypress% Down}
 
 	toggledisplaytext:=toggleontext
