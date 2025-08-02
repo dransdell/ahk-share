@@ -1,0 +1,2 @@
+# KittensGame
+Automation (cheating)
