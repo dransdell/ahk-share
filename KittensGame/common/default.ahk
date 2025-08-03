@@ -1,33 +1,32 @@
 #Requires AutoHotkey v2.0
 
 ; Tooltip Coordinates
-tooltipx:="3400"
-tooltipy:="200"
-tooltiptext:= "F8 to run loop`nCtrl + F8 to Exit"
+tooltipx:=IniRead("common/config.ini", "tooltip", "x")
+tooltipy:=IniRead("common/config.ini", "tooltip", "y")
+tooltiptext:=IniRead("common/config.ini", "tooltip", "text")
 
 
 ; Key to break timer & run loop manually
-breakkey:="F8"
+breakkey:=IniRead("common/config.ini", "keybind", "breakkey")
+
 
 ; Timer settings
-timerseconds:=30
+timerseconds:=IniRead("common/config.ini", "timer", "durationseconds")
+
 
 ; Exit modify keys
-exitkey1:="RCtrl"
-exitkey2:="LCtrl"
+exitkey1:=IniRead("common/config.ini", "keybind", "exitkey1")
+exitkey2:=IniRead("common/config.ini", "keybind", "exitkey2")
 
-; Default end click coordinates (Header bar)
-;endclickx:=3200
-;endclicky:=120
-
-; Default end click coordinates (Observe the Sky)
-endclickx:=3150
-endclicky:=230
 
 ; Action coordinates
-hunterx:=2000
-huntery:=520
+hunterx:=IniRead("common/config.ini", "coordinates", "hunter_x")
+huntery:=IniRead("common/config.ini", "coordinates", "hunter_y")
 
-praisex:=2000
-praisey:=540
+praisex:=IniRead("common/config.ini", "coordinates", "praise_x")
+praisey:=IniRead("common/config.ini", "coordinates", "praise_y")
+
+observex:=IniRead("common/config.ini", "coordinates", "observe_x")
+observey:=IniRead("common/config.ini", "coordinates", "observe_y")
+
 

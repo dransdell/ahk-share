@@ -30,8 +30,8 @@ actions() {
     ; ....
 
 
-    ; Final click
-    clickcoord(endclickx, endclicky)
+    ; Observe the sky
+    clickcoord(observex, observey)
 
     ; Return Mouse position
     MouseMove mousex, mousey
