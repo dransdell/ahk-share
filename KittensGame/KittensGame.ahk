@@ -1,75 +1,32 @@
 #Requires AutoHotkey v2.0
 
 ;;;;;;;;;;;;;;;;;;;;;;;;; INIT ;;;;;;;;;;;;;;;;;;;;;;;;;
-#Include common/click.ahk
+#Include common/includes.ahk
 
 ;;;;;;;;;;;;;;;;;;;;;;;;; CONFIG ;;;;;;;;;;;;;;;;;;;;;;;;;
-;
-;	Note: default configs here
-;
-
+; Default configs here
 #Include common/default.ahk
-
-
-
-
+#Include common/actions.ahk
 
 ;;;;;;;;;;;;;;;;;;;;;;;;; BEGIN ;;;;;;;;;;;;;;;;;;;;;;;;;
 
-tooltiptext:="F8 to run loop`nCtrl + F8 to Exit"
-
 Top:
 
+; Wait mode
+;tooltipshow(tooltiptext, tooltipx, tooltipy)
+;KeyWait(breakkey, "D")
 
-CoordMode "Tooltip"
-ToolTip tooltiptext, tooltipx, tooltipy
+; Timer mode
+timewait(timerseconds)
 
+; Check for exit condition
+appexitcheck()
 
-KeyWait(togglekey, "D")
-
-
-exitkeystate1:=GetKeyState(exitkey1)
-exitkeystate2:=GetKeyState(exitkey2)
-
-
-if (exitkeystate1 = 1) or (exitkeystate2 = 1) {
-    ExitApp
-}
-
-else {
-
-    ; Send hunters
-    clickcoord(hunterx, huntery)
-
-    ; Praise the sun
-    clickcoord(praisex, praisey)
-
-    ; wood
-
-    ; beam
-
-    ; slab
-
-    ; plate
-
-    ; steel
-
-    ; gear
-
-    ; scaffold
-
-    ; parchment
-
-    ; ....
-
-
-    ; Click in header to set neutral mouse position
-    clickcoord(endclickx, endclicky)
-    goto Top
-
-}
-
+; Click actions
+actions()
 
 
 goto Top
+
+
 
