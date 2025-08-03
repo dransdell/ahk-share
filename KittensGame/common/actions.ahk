@@ -2,6 +2,9 @@
 
 actions() {
 
+    ; Save current mouse pos
+    MouseGetPos &mousex, &mousey
+
     ; Send hunters
     clickcoord(hunterx, huntery)
 
@@ -27,7 +30,10 @@ actions() {
     ; ....
 
 
-    ; Click in header to set neutral mouse position
+    ; Final click
     clickcoord(endclickx, endclicky)
+
+    ; Return Mouse position
+    MouseMove mousex, mousey
 
 }
