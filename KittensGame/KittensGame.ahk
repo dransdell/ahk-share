@@ -7,14 +7,14 @@
 ; Default configs here
 #Include common/default.ahk
 #Include common/actions.ahk
+#Include common/debug_actions.ahk
 
 ;;;;;;;;;;;;;;;;;;;;;;;;; BEGIN ;;;;;;;;;;;;;;;;;;;;;;;;;
 
 Top:
 
-; Wait mode
-;tooltipshow(tooltiptext, tooltipx, tooltipy)
-;KeyWait(breakkey, "D")
+; Debug Functions
+;showclicklocations()
 
 ; Timer mode
 timewait(timerseconds)

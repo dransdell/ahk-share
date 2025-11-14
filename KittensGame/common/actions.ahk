@@ -11,20 +11,20 @@ actions() {
     ; Praise the sun
     clickcoord(praisex, praisey)
 
-    ; wood
-    clickcoord(craft1x, craftwoody) ; 1% wood
+    ; wood - CAUTION! Can kill kittens if set too high.
+    ;clickcoord(craft1x, craftwoody) ; 1% wood
 
     ; beam
-    clickcoord(craft1x, craftbeamy) ; 1% beam
+    ;clickcoord(craftallx, craftbeamy) ; ALL beam
 
     ; slab
-    clickcoord(craft1x, craftslaby) ; 1% slab
+    ;clickcoord(craftallx, craftslaby) ; ALL slab
 
     ; steel (before plate)
-    clickcoord(craft1x, craftsteely) ; 1% steel
+    ;clickcoord(craftallx, craftsteely) ; ALL steel
 
     ; plate
-    clickcoord(craft1x, craftplatey) ; 1% plate
+    ;clickcoord(craftallx, craftplatey) ; ALL plate
 
     ; gear
     ;clickcoord(craft1x, craftgeary) ; 1% gear
@@ -33,10 +33,10 @@ actions() {
     ;clickcoord(craft1x, craftscaffoldy) ; 1% scaffold
 
     ; parchment
-    clickcoord(craft1x, craftparchmenty) ; 1% parchment
+    ;clickcoord(craft1x, craftparchmenty) ; 1% parchment
 
     ; manuscript
-    clickcoord(craft1x, craftmanuscripty) ; 1% manuscript
+    ;lickcoord(craft5x, craftmanuscripty) ; 5% manuscript
     
     ; compendium
     ;clickcoord(craft1x, craftcompendiumy) ; 1% compendium
@@ -48,6 +48,9 @@ actions() {
     clickcoord(observex, observey)
 
     ; Return Mouse position
-    MouseMove mousex, mousey
+    ;MouseMove mousex, mousey
+
+    ; Click back to original window
+    clickcoord(mousex, mousey)
 
 }

@@ -24,7 +24,7 @@ hunterx:=IniRead("common/config.ini", "coordinates", "hunter_x")
 huntery:=IniRead("common/config.ini", "coordinates", "hunter_y")
 
 praisex:=IniRead("common/config.ini", "coordinates", "praise_x")
-praisey:=IniRead("common/config.ini", "coordinates", "praise_y")
+praisey:=huntery + 18 ;IniRead("common/config.ini", "coordinates", "praise_y") ; Relative to hunter_y
 
 observex:=IniRead("common/config.ini", "coordinates", "observe_x")
 observey:=IniRead("common/config.ini", "coordinates", "observe_y")
@@ -36,16 +36,17 @@ craft10x:=IniRead("common/config.ini", "coordinates", "craft_10pct_x")
 craftallx:=IniRead("common/config.ini", "coordinates", "craft_all_x")
 
 craftwoody:=IniRead("common/config.ini", "coordinates", "craft_wood_y")
-craftbeamy:=IniRead("common/config.ini", "coordinates", "craft_beam_y")
-craftslaby:=IniRead("common/config.ini", "coordinates", "craft_slab_y")
-craftplatey:=IniRead("common/config.ini", "coordinates", "craft_plate_y")
-craftsteely:=IniRead("common/config.ini", "coordinates", "craft_steel_y")
-craftgeary:=IniRead("common/config.ini", "coordinates", "craft_gear_y")
-craftscaffoldy:=IniRead("common/config.ini", "coordinates", "craft_scaffold_y")
-craftshipy:=IniRead("common/config.ini", "coordinates", "craft_ship_y")
-craftparchmenty:=IniRead("common/config.ini", "coordinates", "craft_parchment_y")
-craftmanuscripty:=IniRead("common/config.ini", "coordinates", "craft_manuscript_y")
-craftcompendiumy:=IniRead("common/config.ini", "coordinates", "craft_compendium_y")
-craftmegalithy:=IniRead("common/config.ini", "coordinates", "craft_megalith_y")
+craftbeamy:=craftwoody + 21 ;IniRead("common/config.ini", "coordinates", "craft_beam_y")
+craftslaby:=craftbeamy + 21 ;IniRead("common/config.ini", "coordinates", "craft_slab_y")
+craftplatey:=craftslaby + 21 ;IniRead("common/config.ini", "coordinates", "craft_plate_y")
+craftsteely:=craftplatey + 21 ;IniRead("common/config.ini", "coordinates", "craft_steel_y")
+craftgeary:=craftsteely + 21 ;IniRead("common/config.ini", "coordinates", "craft_gear_y")
+craftalloy:=craftgeary + 21 ;
+craftscaffoldy:=craftalloy + 21 ;IniRead("common/config.ini", "coordinates", "craft_scaffold_y")
+craftshipy:=craftscaffoldy + 21 ;IniRead("common/config.ini", "coordinates", "craft_ship_y")
+craftparchmenty:=craftshipy + 21 ;IniRead("common/config.ini", "coordinates", "craft_parchment_y")
+craftmanuscripty:=craftparchmenty + 21 ;IniRead("common/config.ini", "coordinates", "craft_manuscript_y")
+craftcompendiumy:=craftmanuscripty + 21 ;IniRead("common/config.ini", "coordinates", "craft_compendium_y")
+craftmegalithy:=craftcompendiumy + 21 ;IniRead("common/config.ini", "coordinates", "craft_megalith_y")
 
 
