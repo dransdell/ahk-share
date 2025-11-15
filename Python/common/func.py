@@ -1,6 +1,8 @@
 import pandas as pd
 from tabulate import tabulate
 
-def df_pretty(dataframe):
-    
-    return (tabulate(dataframe, headers="keys", tablefmt="pretty"))
+class DataFrameHelper:
+
+    def df_pretty(self, dataframe):
+        
+        return (tabulate(dataframe, headers="keys", tablefmt="pretty"))

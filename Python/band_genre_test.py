@@ -16,15 +16,18 @@ data2 = {
 data_df1 = func.pd.DataFrame(data1)
 data_df2 = func.pd.DataFrame(data2)
 
-# concat results in dups
+# Instantiate DataFrameHelper
+dfh = func.DataFrameHelper()
+
+# concat
 #data_concat = func.pd.concat([data_df1, data_df2], ignore_index=True)
-#print(func.df_pretty(data_concat))
+#print(dfh.df_pretty(data_concat))
 
 # inner join
 #data_inner = func.pd.merge(data_df1, data_df2, on=['Band', 'Genre'], how='inner')
-#print(func.df_pretty(data_inner))
+#print(dfh.df_pretty(data_inner))
 
 # outer join removes dups
 data_outer = func.pd.merge(data_df1, data_df2, on=['Band', 'Genre'], how='outer')
-print(func.df_pretty(data_outer))
+print(dfh.df_pretty(data_outer))
 
