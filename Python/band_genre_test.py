@@ -13,8 +13,6 @@ data2 = {
     'Genre': ['Nu Metal', 'Alternative Metal', 'Metalcore', 'Prog Metal', 'Post Hardcore', 'Post Hardcore', 'Post Hardcore', 'Metalcore', 'Metalcore', 'Metalcore'],
 }
 
-
-
 data_df1 = func.pd.DataFrame(data1)
 data_df2 = func.pd.DataFrame(data2)
 
@@ -29,5 +27,4 @@ data_df2 = func.pd.DataFrame(data2)
 # outer join removes dups
 data_outer = func.pd.merge(data_df1, data_df2, on=['Band', 'Genre'], how='outer')
 print(func.df_pretty(data_outer))
-
 
